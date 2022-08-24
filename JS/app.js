@@ -5,10 +5,12 @@ for (let i = 0; i < hola; i++) {
     alert("hola")
 }
 
-const numero = prompt("Repeticion de numeros: ¿Cuantos numeros desea ver?")
+const numero = Number(prompt("¿La tabla de que numero quiere ver?"));
 
-for (let i = 1; i <= numero; i++){
-    alert(`${i}`)
+
+for (let i = 1; i <= 10; i++){
+    let resultado = i * numero;
+    alert(`${resultado}`)
 }
 
 
