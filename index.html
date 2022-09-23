@@ -15,7 +15,9 @@
       <nav class="navbar bg-light">
         <form class="container-fluid justify-content-start">
           <button id="productos" class="btn btn-outline-success me-2" type="button">Productos</button>
-          <button id="botonSinFuncion1" class="btn btn-sm btn-outline-secondary" type="button">Carrito</button>
+          <button type="button" class="btn btn-primary">
+            carrito <span id="botonCarrito" class="badge text-bg-secondary">0</span>
+          </button>
           <button id="botonSinFuncion2" class="btn btn-sm btn-outline-secondary" type="button">Sobre nosotros</button>
         </form>
       </nav>
@@ -23,16 +25,21 @@
     </header>
     <main>
       
+      <div class="contenedorTitulo">
+        <h2 class="subtitulo">
+          Tienda de comics y merch! 
+        </h2>
+      </div>
+      
       <div class="container-fluid flex-wrap">
         <div class="row" id="container"></div>
       </div>
         
         
-        <div class="contenedorTitulo">
-          <h2 class="subtitulo">
-            Tienda de comics y merch! 
-          </h2>
-        </div>
+       
+        
+        <div id="carritoDeCompras"></div>
+        <a name="carrito"></a>
     </main>
     <!-- JavaScript Bundle with Popper -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

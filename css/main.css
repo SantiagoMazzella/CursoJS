@@ -21,7 +21,7 @@ h1{
     border-radius: 5px;
     padding: 0.2rem;
     background-color: aliceblue;
-    margin-top: 20rem;
+    margin-top: 2rem;
     font-weight: bolder;
     display: flex;
     flex-direction: row;
@@ -33,4 +33,33 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-self: center;
+}
+
+.baseCarrito {
+    margin: 10%;
+   background-color: rgb(122, 50, 50);
+   
+}
+
+.product-details{
+    display: inline-block;
+    margin-left: 7rem;
+    font-weight: bold;
+}
+
+#remove-product{
+    height: 50px;
+    width: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.producto-carrito{
+    margin: auto;
+}
+
+.carrito-img {
+    width: 150px;
+    display: inline-block;
 }
