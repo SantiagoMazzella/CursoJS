@@ -65,16 +65,16 @@ botonEnDesarrollo2.addEventListener("click", enDesarrollo)
 // Agregar producto al carrito
 const carrito = []
 
-const miLocalStorage = window.localStorage;
-
-const carritoStr = JSON.stringify(carrito)
-localStorage.setItem("carrito", carritoStr)
-
 
 
 function guardarLocalStorage(){
     miLocalStorage.setItem("carrito", JSON.stringify(carrito));
-    const copiaDeSeguridad = localStorage.getItem("carrito");
+    
+
+    if (carrito === "") {
+        
+        dibujarCarrito();
+    }
     
 }
 
@@ -87,6 +87,14 @@ let cantidadCarrito = document.querySelector
 
 let total = 0;
 let modalCarrito =document.getElementById("carritoDeCompras")
+
+const miLocalStorage = window.localStorage;
+
+const carritoStr = JSON.stringify(carrito)
+localStorage.setItem("Carrito", carritoStr)
+
+const copiaDeSeguridad = localStorage.getItem("carrito");
+console.log(JSON.parse(copiaDeSeguridad));
 
 const dibujarCarrito = () => {
     modalCarrito.className="baseCarrito"
@@ -125,7 +133,23 @@ const agregarAlCarrito = (indice) => {
         carrito[indiceCarrito].cantidad +=1;
         dibujarCarrito();
     }
-}
+    
+};
+
+const RecuperacionCarrito = (indice) => {
+     const carritoGuardado = copiaDeSeguridad.findIndex((productoRec)=>{
+     productoRec.id === productos[indice].id
+ if (carritoGuardado === -1) {
+     const produtoAgregar = productos[indice]
+     produtoAgregar.cantidad = 1;
+     carrito.push(produtoAgregar);
+     dibujarCarrito ();
+ } else {
+     carrito[indiceCarrito].cantidad +=1;
+     dibujarCarrito();
+ }
+})}
+
 
 // Eliminar productos del carrito
 
