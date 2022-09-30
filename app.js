@@ -3,18 +3,70 @@
 let productos = [
     {
     id: 1,
+    categoria: "remeras",
     nombre: "Remera Spider-man",
     precio: 2100,
     imagen: "./img/remera.jpg",
     },
     {
     id: 2,
+    categoria: "remeras",
+    nombre: "Remera Spider-man",
+    precio: 2100,
+    imagen: "./img/remera.jpg",
+    },
+    {
+    id: 3,
+    categoria: "remeras",
+    nombre: "Remera Spider-man",
+    precio: 2100,
+    imagen: "./img/remera.jpg",
+    },
+    {
+    id: 4,
+    categoria: "comics",
     nombre: "Comic Dare Devil, Born Again",
     precio: 1500,
     imagen: "./img/bornAgain.jpg",
     },
     {
-    id: 3,
+    id: 5,
+    categoria: "comics",
+    nombre: "Comic Dare Devil, Born Again",
+    precio: 1500,
+    imagen: "./img/bornAgain.jpg",
+    },
+    {
+    id: 6,
+    categoria: "comics",
+    nombre: "Comic Dare Devil, Born Again",
+    precio: 1500,
+    imagen: "./img/bornAgain.jpg",
+    },
+    {
+    id: 7,
+    categoria: "comics",
+    nombre: "Comic Dare Devil, Born Again",
+    precio: 1500,
+    imagen: "./img/bornAgain.jpg",
+    },
+    {
+    id: 8,
+    categoria: "comics",
+    nombre: "Comic Spider-man, La ultima caceria de Kraven",
+    precio: 1250,
+    imagen: "./img/laUltimaCaceriaDeKraven.jpg",
+    },
+    {
+    id: 9,
+    categoria: "comics",
+    nombre: "Comic Spider-man, La ultima caceria de Kraven",
+    precio: 1250,
+    imagen: "./img/laUltimaCaceriaDeKraven.jpg",
+    },
+    {
+    id: 10,
+    categoria: "comics",
     nombre: "Comic Spider-man, La ultima caceria de Kraven",
     precio: 1250,
     imagen: "./img/laUltimaCaceriaDeKraven.jpg",
@@ -44,9 +96,8 @@ const dibujarProductos = () => {
     });
 };
 
+dibujarProductos();
 
-let botonProductos = document.getElementById("productos")
-botonProductos.addEventListener("click", dibujarProductos)
 
 const enDesarrollo = () => {
     Swal.fire({
@@ -58,9 +109,11 @@ const enDesarrollo = () => {
 
 // Boton sin Funcion
 
+let botonEnDesarrollo = document.querySelector("#botonSinFuncion")
 let botonEnDesarrollo2 = document.querySelector("#botonSinFuncion2")
 
 botonEnDesarrollo2.addEventListener("click", enDesarrollo)
+botonEnDesarrollo.addEventListener("click", enDesarrollo)
 
 // Agregar producto al carrito
 const carrito = []
@@ -78,20 +131,17 @@ function guardarLocalStorage(){
     
 }
 
-const productosEnCarrito = carrito.length
+// const productosEnCarrito = carrito.length
 
-let cantidadCarrito = document.querySelector
+// let cantidadCarrito = document.querySelector("#botonCarrito")
 
-("#botonCarrito").textContent=`${productosEnCarrito}`
+// cantidadCarrito.textContent=`${productosEnCarrito}`
 
 
 let total = 0;
 let modalCarrito =document.getElementById("carritoDeCompras")
 
 const miLocalStorage = window.localStorage;
-
-const carritoStr = JSON.stringify(carrito)
-localStorage.setItem("Carrito", carritoStr)
 
 const copiaDeSeguridad = localStorage.getItem("carrito");
 console.log(JSON.parse(copiaDeSeguridad));
@@ -138,17 +188,20 @@ const agregarAlCarrito = (indice) => {
 
 const RecuperacionCarrito = (indice) => {
      const carritoGuardado = copiaDeSeguridad.findIndex((productoRec)=>{
-     productoRec.id === productos[indice].id
+     productoRec.id === copiaDeSeguridad[indice].id
+     });
  if (carritoGuardado === -1) {
-     const produtoAgregar = productos[indice]
-     produtoAgregar.cantidad = 1;
-     carrito.push(produtoAgregar);
+     const produtoRecrear = copiaDeSeguridad[indice]
+     produtoRecrear.cantidad = 1;
+     carrito.push(produtoRecrear);
      dibujarCarrito ();
- } else {
-     carrito[indiceCarrito].cantidad +=1;
+     } else {
+     carrito[carritoGuardado].cantidad +=1;
      dibujarCarrito();
  }
-})}
+}
+
+
 
 
 // Eliminar productos del carrito
