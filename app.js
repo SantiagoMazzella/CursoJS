@@ -9,7 +9,7 @@ const guardarLocalStorage = () => {
 let contenedor = document.getElementById("container")
 
 const dibujarProductos = () => {
-    fetch(`/data.json`)
+    fetch(`./data.json`)
     .then((Resp)=> Resp.json())
     .then((productos) => {
         productos.forEach((producto, indice)=>{
@@ -112,7 +112,7 @@ botonEnDesarrollo2.addEventListener("click", enDesarrollo)
 
 const agregarAlCarrito = (indice) => {
 
-    fetch(`/data.json`)
+    fetch(`./data.json`)
     .then((Resp)=>Resp.json())
     .then((productos) => {
 
