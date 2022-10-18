@@ -1,0 +1,72 @@
+[
+    {
+    "id": 1,
+    "categoria": "remeras",
+    "nombre": "Remera Spider-man",
+    "precio": 4100,
+    "imagen": "./img/remera.jpg"
+    },
+    {
+    "id": 2,
+    "categoria": "remeras",
+    "nombre": "Remera Flash",
+    "precio": 3100,
+    "imagen": "./img/remeraFlash.jpg"
+    },
+    {
+    "id": 3,
+    "categoria": "remeras",
+    "nombre": "Remera Marvel",
+    "precio": 3500,
+    "imagen": "./img/remeraMarvel.jpg"
+    },
+    {
+    "id": 4,
+    "categoria": "comics",
+    "nombre": "Comic Dare Devil, Born Again",
+    "precio": 1700,
+    "imagen": "./img/bornAgain.jpg"
+    },
+    {
+    "id": 5,
+    "categoria": "comics",
+    "nombre": "Comic Spider-Man, Maximum Carnage",
+    "precio": 1850,
+    "imagen": "./img/maximumCarnage.jpg"
+    },
+    {
+    "id": 6,
+    "categoria": "comics",
+    "nombre": "Comic Batman, The Killing Joke",
+    "precio": 1750,
+    "imagen": "./img/theKillingJoke.jpg"
+    },
+    {
+    "id": 7,
+    "categoria": "comics",
+    "nombre": "Comic Moon Knight, Vengeance Of The Moon Knight",
+    "precio": 1450,
+    "imagen": "./img/vengeanceOfTheMoonKnight.jpg"
+    },
+    {
+    "id": 8,
+    "categoria": "comics",
+    "nombre": "Comic Thanos, Infinity Gauntlet",
+    "precio": 2150,
+    "imagen": "./img/infinityGauntlet.jpg"
+    },
+    {
+    "id": 9,
+    "categoria": "comics",
+    "nombre": "Comic Spider-man, La ultima caceria de Kraven",
+    "precio": 1950,
+    "imagen": "./img/laUltimaCaceriaDeKraven.jpg"
+    },
+    {
+    "id": 10,
+    "categoria": "comics",
+    "nombre": "Comic Flash, Flash point",
+    "precio": 1780,
+    "imagen": "./img/theFlashPoint.jpg"
+}
+]
